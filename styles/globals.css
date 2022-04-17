@@ -1,16 +1,88 @@
+@import "animations.css";
+
 html,
 body {
+  font-size: 110%;
   padding: 0;
   margin: 0;
+  color: var(--text-color);
+  background-color: var(--background-color);
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+code {
+  font-size: x-large;
+  color: var(--secondary-color)
 }
 
-* {
-  box-sizing: border-box;
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+hr {
+  opacity: 0.2;
+}
+
+.lockup {
+  margin-left: 5vw;
+  margin-right: 5vw;
+  padding-top: 10px;
+  width: auto;
+  height: auto;
+}
+
+.ghost-d-1 {
+  opacity: 1;
+  animation: slidein 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.typewriter-5,.typewriter-4 {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.5em solid var(--primary-color);
+}
+
+.typewriter-5 {
+  width: 9rem;
+  animation: typing-9 steps(8, jump-none) 1s, blink 1s ease-in-out 1.1s infinite;
+}
+.typewriter-4 {
+  width: 7.2rem;
+  animation: typing-7 steps(6, jump-none) 1s, blink 1s ease-in-out 1.1s infinite;
+}
+.posts {
+  margin-top: 2rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  display: grid;
+  /* grid-auto-flow: column; */
+  grid-template-columns: repeat(
+    auto-fill, minmax(600px, 1fr));
+  gap: 1rem;
+}
+
+
+@media screen and (max-width: 900px) {
+  .posts {
+    align-items: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    grid-template-columns: repeat(
+      auto-fill, minmax(300px, 1fr));
+  }
+  .bigtitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 }

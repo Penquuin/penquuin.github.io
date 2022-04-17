@@ -1,0 +1,44 @@
+.sorter {
+  display: flex;
+  margin-top: 5rem;
+  justify-content:center;
+  flex-direction: row;
+}
+
+.center {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+.sorter div {
+  justify-content: center;
+  flex-direction: row;
+}
+
+.imageholder {
+  width: 400px;
+  height: 400px;
+}
+
+.postbody {
+  padding: 1rem;
+  padding-top: 0rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .sorter {
+    min-width: 0%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .center {
+    justify-content: center;
+  }
+  .imageholder {
+    min-width: 100px;
+    max-width: 500px;
+  }
+}

@@ -1,0 +1,51 @@
+@import "variables.css";
+
+@keyframes blink {
+  0% {
+    border-color: var(--primary-color);
+  }
+
+  50% {
+    border-color: transparent;
+  }
+
+  100% {
+    border-color: var(--primary-color);
+  }
+}
+
+@keyframes typing-9 {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 9rem;
+  }
+}
+
+@keyframes typing-7 {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 7rem;
+  }
+}
+
+@keyframes slidein {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  40% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    opacity: 1;
+    /* opacity: 1; */
+  }
+}
